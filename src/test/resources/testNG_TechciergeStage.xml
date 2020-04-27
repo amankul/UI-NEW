@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TEST SUITE">
+
+    <!--SUITE LEVEL PARAMETERS-->
+
+    <parameter name="url" value="http://staging.smpkcore.com/TechciergeAdmin/"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="browserVersion" value="65.0"/>
+    <parameter name="targetRun" value="local"/>
+    <parameter name="data" value="TechciergeStage.properties"/>
+
+
+
+    <test name="Staff UI Tests">
+        <classes>
+            <!--<class name="com.org.resi.LoginTest"/>-->
+            <class name="com.org.resi.SaltoUALTest"/>
+            <class name="com.org.resi.ResidentVisitorWithoutPhoneNumber"/>
+        </classes>
+    </test>
+
+</suite>
+
+
+        <!--notes-->
+        <!--`runOn` options : local or browserstack -->
+        <!--`browserVersion` gets ignored and runs tests on latest browser version available if `targetRun = local`-->
