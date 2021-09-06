@@ -2,7 +2,7 @@
 
 <suite name="TEST SUITE">
 
-    <!--SUITE LEVEL PARAMETERS-->
+    <!--SUITE LEVEL PARAMETERS - add parallel = 'method' , thread-count = 5 -->
 
     <parameter name="url" value="http://staging.smpkcore.com/TechciergeAdmin/"/>
     <parameter name="browser" value="Chrome"/>
@@ -10,7 +10,9 @@
     <parameter name="targetRun" value="local"/>
     <parameter name="data" value="TechciergeStage.properties"/>
 
-
+<listeners> 
+    <listener class-name="com.org.resi.utilities.TestListener"></listener>
+</listeners>
 
     <test name="Staff UI Tests">
         <classes>
